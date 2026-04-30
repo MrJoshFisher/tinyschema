@@ -9,6 +9,23 @@
  * Text Domain: trio-tiny-schema
  */
 
+/**
+ * Plugin Update Checker
+ */
+
+ require __DIR__ . '/admin/plugin-update-checker/plugin-update-checker.php';
+
+ use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+ 
+ add_action('plugins_loaded', function () {
+	 $updateChecker = PucFactory::buildUpdateChecker(
+		 'https://github.com/MrJoshFisher/tinyschema/',
+		 __FILE__,
+		 'tinyschema'
+	 );
+ 
+	 $updateChecker->getVcsApi()->enableReleaseAssets();
+ });
 
 /**
  * Add settings link to plugin page
