@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Trio Tiny Schema
  * Description: A plugin to add schema.org microdata to WordPress posts and pages.
- * Version: 1.0
+ * Version: 1.0.1
  * Author: Josh Fisher
  * Author URI: mailto:josh@trio-media.co.uk
  * License: GPL2
